@@ -5,14 +5,16 @@ import PersonDetails from './components/PersonDetails/PersonDetails';
 class App extends Component {
     state = {
             personDetails: [
-                    {name: ' '},
+                    {firstName: ' '},
+                    {lastName: ' '}
             ]
     }
 
     nameInputHandler = (event) => {
                 this.setState({
                     personDetails: [
-                                        {name: event.target.value},
+                                        {firstName: event.target.value},
+                                        {lastName: event.target.value}
                                 ]
 
                 } )
@@ -21,7 +23,8 @@ class App extends Component {
     render(){
         return (
                 <div className="App">
-                    <PersonDetails name = {this.state.personDetails[0].name}
+                    <PersonDetails firstName = {this.state.personDetails[0].firstName}
+                                    lastName = {this.state.personDetails[1].lastName}
                                     changed = {this.nameInputHandler}/>
                 </div>
          );
