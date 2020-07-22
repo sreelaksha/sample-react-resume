@@ -7,9 +7,42 @@
     padding: 10px;
     box-sizing: border-box;
 }
+.Label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.Input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.InputElement{
+    outline: none;
+   background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Button {
+    background-color: gray;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
 
 @media (min-width: 600px){
-    .ContactData{
+    .PersonalInfo{
         width: 500px;
     }
 }
