@@ -7,6 +7,14 @@
     padding: 10px;
     box-sizing: border-box;
 }
+
+.PersonalInfoLabel{
+        color: #283648;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: .8em;
+        letter-spacing: .1em;
+}
 .Label{
     font-weight: bold;
     display: block;
