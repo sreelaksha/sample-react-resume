@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Aux from '../../hoc/Aux';
 import styles from './PersonalInfo.module.css';
-import Input from '../Input/Input';
+import Button from '../Button/Button';
 import { Router, Route, Switch } from "react-router";
 
 class PersonalInfo extends Component {
@@ -120,7 +120,9 @@ class PersonalInfo extends Component {
                       <p> Your country is: {this.state.country}</p>
                       <p> Your email is: {this.state.email}</p>
                       <p> Your phone is: {this.state.phone}</p>
-                      <button className ={styles.Button}> NEXT </button>
+                      <Button
+                        clicked = { () => history.push('/Experience')}
+                      > SAVE & NEXT </Button>
                     </form>
                  </Aux>
             );
