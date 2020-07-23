@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-//import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Aux';
 import styles from './PersonalInfo.module.css';
 import Input from '../Input/Input';
+import { Router, Route, Switch } from "react-router";
 
 class PersonalInfo extends Component {
         state = {
@@ -23,9 +24,14 @@ class PersonalInfo extends Component {
               });
             }
 
+        continuePersonalInfoHandler = () => {
+
+        }
 
         render(){
             return(
+                <Aux>
+                <span className ={styles.PersonalInfoLabel}> PERSONAL INFO </span>
                 <form className ={styles.PersonalInfo}>
                       <label className ={styles.Label}>
                         First name
@@ -79,7 +85,7 @@ class PersonalInfo extends Component {
                             </label>
                             <label className ={styles.Label}>
                               Country
-                              <select name="country" onChange={this.handleChange} value={this.state.country}>
+                              <select className ={styles.Input} name="country" onChange={this.handleChange} value={this.state.country}>
                                         <option value="Germany">Germany</option>
                                         <option value="India">India</option>
                                         <option value="USA">USA</option>
@@ -116,6 +122,7 @@ class PersonalInfo extends Component {
                       <p> Your phone is: {this.state.phone}</p>
                       <button className ={styles.Button}> NEXT </button>
                     </form>
+                 </Aux>
             );
         }
         }
