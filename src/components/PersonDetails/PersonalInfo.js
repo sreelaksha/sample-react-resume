@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import axios from "axios";
+import { Router, Route, Switch } from "react-router";
+
 import Aux from '../../hoc/Aux';
 import styles from './PersonalInfo.module.css';
 import Button from '../Button/Button';
-import { Router, Route, Switch } from "react-router";
+
 
 class PersonalInfo extends Component {
         state = {
@@ -15,6 +18,11 @@ class PersonalInfo extends Component {
                 email: " ",
                 phone: " "
         }
+
+        componentDidMount(){
+                        console.log(this.props);
+         }
+
 
         handleChange = (event) =>{
             const value = event.target.value;
@@ -120,9 +128,7 @@ class PersonalInfo extends Component {
                       <p> Your country is: {this.state.country}</p>
                       <p> Your email is: {this.state.email}</p>
                       <p> Your phone is: {this.state.phone}</p>
-                      <Button
-                        clicked = { () => history.push('/Experience')}
-                      > SAVE & NEXT </Button>
+                      <Button> SAVE & NEXT </Button>
                     </form>
                  </Aux>
             );
