@@ -18,3 +18,20 @@
     padding: 10px;
     box-sizing: border-box;
 }
+
+.LabelCheckbox {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.InputCheckbox  {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+}
