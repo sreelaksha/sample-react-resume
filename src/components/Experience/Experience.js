@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import DatePicker from 'react-datepicker';
 
 import Aux from '../../hoc/Aux';
 import styles from './Experience.module.css';
@@ -15,6 +16,7 @@ class Experience extends Component {
                 startDate : " ",
                 endDate :  " ",
                 jobDescription: " ",
+                workHereCheckbox: " ",
         }
 
         handleChange = (event) =>{
@@ -25,11 +27,13 @@ class Experience extends Component {
               });
             }
 
+
+
         render(){
             return(
                 <Aux>
                 <span className ={styles.PersonalInfoLabel}> EXPERIENCE </span>
-                <form className ={styles.Experience}>
+                <form className ={styles.Experience} >
                       <label className ={styles.Label}>
                         Employer
                         <input
@@ -40,7 +44,66 @@ class Experience extends Component {
                           onChange={this.handleChange}
                         />
                       </label>
-                      <Button> NEXT </Button>
+                      <label className ={styles.Label}>
+                          Job title
+                          <input
+                            className ={styles.Input}
+                            type="text"
+                            name="jobTitle"
+                            value={this.state.jobTitle}
+                            onChange={this.handleChange}
+                          />
+                        </label>
+                        <label className ={styles.Label}>
+                            City
+                            <input
+                              className ={styles.Input}
+                              type="text"
+                              name="city"
+                              value={this.state.city}
+                              onChange={this.handleChange}
+                            />
+                          </label>
+                          <label className ={styles.Label}>
+                              State
+                              <input
+                                className ={styles.Input}
+                                type="text"
+                                name="state"
+                                value={this.state.state}
+                                onChange={this.handleChange}
+                              />
+                            </label>
+                           <label className ={styles.Label}>
+                                         Start date
+                                         <input
+                                           className ={styles.Input}
+                                           type="date"
+                                           name="startDate"
+                                           value={this.state.startDate}
+                                           onChange={this.handleChange}
+                            />
+                             </label>
+                             <label className ={styles.Label}>
+                                      End date
+                                      <input
+                                        className ={styles.Input}
+                                        type="date"
+                                        name="endDate"
+                                        value={this.state.endDate}
+                                        onChange={this.handleChange}
+                             />
+                             </label>
+                             <label className ={styles.LabelCheckbox}>
+                             <input
+                                          className ={styles.InputCheckbox}
+                                          type="checkbox"
+                                          name="workHereCheckbox"
+                                          value={this.state.workHereCheckbox}
+                                          onChange={this.handleChange}
+                                />
+                              I presently work here </label>
+                          <Button> SAVE & NEXT </Button>
                     </form>
                  </Aux>
             );
