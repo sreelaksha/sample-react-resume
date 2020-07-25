@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import { Router, Route, Switch } from "react-router";
+import { Router, Route, Switch, Redirect, Link } from "react-router";
 
 import Aux from '../../hoc/Aux';
 import styles from './PersonalInfo.module.css';
 import Button from '../Button/Button';
+import Experience from '../Experience/Experience.js';
 
 
 class PersonalInfo extends Component {
@@ -32,9 +33,11 @@ class PersonalInfo extends Component {
               });
             }
 
-        continuePersonalInfoHandler = () => {
 
-        }
+        handleButtonClick =(id) =>{
+                           // this.props.history.push({pathname : '/posts' + id});
+                             this.props.history.push('/experience/' +id );
+                    }
 
         render(){
             return(
@@ -128,7 +131,7 @@ class PersonalInfo extends Component {
                       <p> Your country is: {this.state.country}</p>
                       <p> Your email is: {this.state.email}</p>
                       <p> Your phone is: {this.state.phone}</p>
-                      <Button> SAVE & NEXT </Button>
+                      <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
                  </Aux>
             );
