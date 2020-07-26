@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import DatePicker from 'react-datepicker';
 
 import Aux from '../../hoc/Aux';
 import styles from './Experience.module.css';
@@ -16,7 +15,11 @@ class Experience extends Component {
                 startDate : " ",
                 endDate :  " ",
                 jobDescription: " ",
-                workHereCheckbox: " ",
+                workHereCheckbox: false
+        }
+
+        handleButtonClick =(id) =>{
+                   this.props.history.push('/education/' +id );
         }
 
         handleChange = (event) =>{
@@ -27,7 +30,11 @@ class Experience extends Component {
               });
             }
 
+        checkboxHandler = (event) => {
+                        this.setState({workHereCheckbox : !this.state.workHereCheckbox});
+                        console.log(this.state.workHereCheckbox)
 
+                    }
 
         render(){
             return(
@@ -99,11 +106,18 @@ class Experience extends Component {
                                           className ={styles.InputCheckbox}
                                           type="checkbox"
                                           name="workHereCheckbox"
-                                          value={this.state.workHereCheckbox}
-                                          onChange={this.handleChange}
+                                          checked={this.state.workHereCheckbox}
+                                          onChange={this.checkboxHandler}
                                 />
                               I presently work here </label>
-                          <Button> SAVE & NEXT </Button>
+                             <p> Your employer is: {this.state.employer}</p>
+                            <p> Your jobTitle is: {this.state.jobTitle}</p>
+                            <p> Your city is: {this.state.city}</p>
+                            <p> Your state is: {this.state.state}</p>
+                            <p> Your startDate is: {this.state.startDate}</p>
+                            <p> Your endDate is: {this.state.endDate}</p>
+                            <p> Your workHereCheckbox is: {this.state.workHereCheckbox}</p>
+                            <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
                  </Aux>
             );
