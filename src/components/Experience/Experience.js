@@ -39,7 +39,7 @@ class Experience extends Component {
         render(){
             return(
                 <Aux>
-                <span className ={styles.PersonalInfoLabel}> EXPERIENCE </span>
+                <span className ={styles.ExperienceLabel}> EXPERIENCE </span>
                 <form className ={styles.Experience} >
                       <label className ={styles.Label}>
                         Employer
