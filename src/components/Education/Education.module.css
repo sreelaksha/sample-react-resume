@@ -42,3 +42,9 @@
   top: -1px;
   *overflow: hidden;
 }
+
+@media (min-width: 600px){
+    .Education{
+        width: 500px;
+    }
+}

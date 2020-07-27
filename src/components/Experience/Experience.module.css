@@ -43,3 +43,9 @@
   top: -1px;
   *overflow: hidden;
 }
+
+@media (min-width: 600px){
+    .Experience{
+        width: 500px;
+    }
+}
