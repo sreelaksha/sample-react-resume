@@ -24,6 +24,11 @@ class Experience extends Component {
          });
     }
 
+    checkboxHandler = (event) => {
+             this.setState({attendHereCheckbox : event.target.checked});
+            console.log(event.target.checked);
+    }
+
   render(){
     return(
          <Aux>
@@ -105,6 +110,7 @@ class Experience extends Component {
                      <p> Your degree is: {this.state.degree}</p>
                      <p> Your fieldOfStudy is: {this.state.fieldOfStudy}</p>
                      <p> Your graduationDate is: {this.state.graduationDate}</p>
+                     <p> Your attendHereCheckbox is: {this.state.attendHereCheckbox.toString()}</p>
                      <Button clicked = {this.handleButtonClick}> SAVE </Button>
                  </form>
          </Aux>

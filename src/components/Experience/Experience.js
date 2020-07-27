@@ -31,8 +31,8 @@ class Experience extends Component {
             }
 
         checkboxHandler = (event) => {
-                        this.setState({workHereCheckbox : !this.state.workHereCheckbox});
-                        console.log(this.state.workHereCheckbox)
+                         this.setState({workHereCheckbox : event.target.checked});
+                        console.log(event.target.checked)
 
                     }
 
