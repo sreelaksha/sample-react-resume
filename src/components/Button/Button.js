@@ -2,11 +2,13 @@ import React from 'react';
 import styles from './Button.module.css';
 
     const button = (props) => (
-        <button
-                className = {styles.PersonalInfoButton}
-                onClick = {props.clicked}>
-            {props.children}
-        </button>
+        <div className = {styles.ButtonDiv}>
+            <button
+                className = {styles.Button}
+                onClick = {props.clicked} >
+                {props.children}
+            </button>
+        </div>
     );
 
 export default button;

@@ -1,16 +1,22 @@
-.PersonalInfoButton {
-    background-color: orange;
-    border: none;
-    color: white;
-    outline: none;
-    cursor: pointer;
-    font: inherit;
-    padding: 10px;
-    margin: 10px;
-    font-weight: bold;
+.ButtonDiv {
+    text-align:right;
+    width:100%;
+    padding:0;
 }
 
-.PersonalInfoButton:hover {
+.Button {
+        background-color: orange;
+        border: none;
+        color: white;
+        outline: none;
+        cursor: pointer;
+        font: inherit;
+        padding: 10px;
+        margin: 10px;
+        font-weight: bold;
+}
+
+.Button:hover {
             background-color : green;
             color : white;
         }
