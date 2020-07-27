@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import Aux from '../../hoc/Aux';
 import styles from './Experience.module.css';
-import Input from '../Input/Input';
 import Button from '../Button/Button';
 
 

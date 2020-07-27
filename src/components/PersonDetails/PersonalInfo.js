@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import axios from "axios";
-import { Router, Route, Switch, Redirect, Link } from "react-router";
+//import axios from "axios";
+//import { Router, Route, Switch, Redirect, Link } from "react-router";
 
 import Aux from '../../hoc/Aux';
 import styles from './PersonalInfo.module.css';
 import Button from '../Button/Button';
-import Experience from '../Experience/Experience.js';
-
 
 class PersonalInfo extends Component {
         state = {
