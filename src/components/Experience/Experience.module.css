@@ -14,6 +14,17 @@
         font-size: .8em;
         letter-spacing: .1em;
 }
+.ExperienceBackButton{
+        background-color: orange;
+        border: none;
+        color: white;
+        outline: none;
+        cursor: pointer;
+        font: inherit;
+        padding: 10px;
+        margin: 10px;
+        font-weight: bold;
+}
 
 .Label{
     font-weight: bold;
