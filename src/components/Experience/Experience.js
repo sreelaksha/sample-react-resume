@@ -116,6 +116,7 @@ class Experience extends Component {
                             <p> Your startDate is: {this.state.startDate}</p>
                             <p> Your endDate is: {this.state.endDate}</p>
                             <p> Your workHereCheckbox is: {this.state.workHereCheckbox.toString()}</p>
+                            <button className ={styles.ExperienceBackButton}> BACK </button>
                             <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
                  </Aux>
