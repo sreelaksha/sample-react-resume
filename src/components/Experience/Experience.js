@@ -6,6 +6,7 @@ import Button from '../Button/Button';
 
 
 class Experience extends Component {
+
         state = {
                 employer : " ",
                 jobTitle : " ",
@@ -15,6 +16,14 @@ class Experience extends Component {
                 endDate :  " ",
                 jobDescription: " ",
                 workHereCheckbox: false
+        }
+
+        componentDidMount(){
+                console.log(this.props);
+        }
+
+        navigateBack = () => {
+                this.props.history.goBack();
         }
 
         handleButtonClick =(id) =>{
@@ -34,6 +43,7 @@ class Experience extends Component {
                         console.log(event.target.checked)
 
                     }
+
 
         render(){
             return(
@@ -116,8 +126,13 @@ class Experience extends Component {
                             <p> Your startDate is: {this.state.startDate}</p>
                             <p> Your endDate is: {this.state.endDate}</p>
                             <p> Your workHereCheckbox is: {this.state.workHereCheckbox.toString()}</p>
-                            <button className ={styles.ExperienceBackButton}> BACK </button>
-                            <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
+                            <div className = {styles.ExperienceButtonDiv}>
+                                <div className = {styles.ExperienceBackButtonDiv}>
+                                    <Button clicked={this.navigateBack}> BACK </Button></div>
+                                <div className = {styles.ExperienceNextButtonDiv} >
+                                    <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
+                                </div>
+                               </div>
                     </form>
                  </Aux>
             );
