@@ -14,16 +14,22 @@
         font-size: .8em;
         letter-spacing: .1em;
 }
-.ExperienceBackButton{
-        background-color: orange;
-        border: none;
-        color: white;
-        outline: none;
-        cursor: pointer;
-        font: inherit;
-        padding: 10px;
-        margin: 10px;
-        font-weight: bold;
+
+.ExperienceButtonDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ExperienceBackButtonDiv{
+        text-align:right;
+        width:100%;
+        padding:0;
+}
+
+.ExperienceNextButtonDiv{
+        text-align:left;
+        width:100%;
+        padding:0;
 }
 
 .Label{
