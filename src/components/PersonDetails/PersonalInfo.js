@@ -8,7 +8,20 @@ import Button from '../Button/Button';
 
 class PersonalInfo extends Component {
         state = {
-                firstName : " ",
+        orderForm: {
+                       firstName: {
+                                    elementConfig: {
+                                        type: 'text',
+                                        placeholder: 'Your FirstName'
+                                    },
+                                    value: '',
+                                    validation: {
+                                        required: true,
+                                    },
+                                    valid: false,
+                                    touched: false
+                                },
+
                 lastName : " ",
                 address : " ",
                 city : " ",
@@ -23,6 +36,7 @@ class PersonalInfo extends Component {
                             },
                             loading: false,
                             formIsValid: false
+                }
         }
 
 
@@ -40,23 +54,48 @@ class PersonalInfo extends Component {
                 if(rules.required){
                     isValid = value.trim() !== '' && isValid;
                 }
-                if(rules.minLength){
+                /*if(rules.minLength){
                             isValid = value.length >= rules.minLength && isValid;
                 }
                 if(rules.maxLength){
                     isValid = value.length <= rules.maxLength && isValid;
-                }
+                }*/
                 return isValid;
          }
 
 
         handleChange = (event) =>{
-            const value = event.target.value;
-              this.setState({
-                ...this.state,
-                [event.target.name]: value
-              });
-            }
+                const value = event.target.value;
+                              this.setState({
+                                ...this.state,
+                                [event.target.name]: value
+                              });
+        }
+
+        //console.log(inputIdentifier);
+                /*const updatedPersonalInfoForm = {
+                        ...this.state.orderForm
+                        };
+                        const updatedFormElement= {
+                            ...updatedOrderForm[inputIdentifier]
+                        };
+                        //console.log(updatedFormItems);
+                        updatedFormElement.value = event.target.value;
+                        updatedFormElement.valid = this.checkValidity(updatedFormElement.value , updatedFormElement.validation )
+                        updatedFormElement.touched = true;
+                        //console.log(updatedFormElement);
+                        updatedOrderForm[inputIdentifier] = updatedFormElement ;
+
+                        let formIsValid = true;
+                        for(let inputIdentifier in updatedOrderForm){
+                            formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
+                        }
+                        console.log(formIsValid);
+
+                        this.setState({orderForm: updatedOrderForm , formIsValid : formIsValid})
+             }
+*/
+
 
 
         handleButtonClick =(id) =>{
@@ -75,7 +114,7 @@ class PersonalInfo extends Component {
                           className ={styles.Input}
                           type="text"
                           name="firstName"
-                          value={this.state.firstName}
+                          value={this.state.orderForm.firstName.value}
                           onChange={this.handleChange}
                         />
                       </label>
