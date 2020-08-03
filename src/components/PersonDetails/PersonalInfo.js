@@ -80,16 +80,16 @@ class PersonalInfo extends Component {
            }
 
 
-        /*formSubmitHandler = (event) => {
+        formSubmitHandler = (event) => {
                 event.preventDefault();
                 this.setState({loading : true})
                 console.log(this.state.loading);
-                *//*if(this.checkValidity()){
+                /*if(this.checkValidity()){
                            alert("Form submitted");
                         }else{
                            alert("Form has errors.")
-                        }*//*
-        }*/
+                        }*/
+        }
         //console.log(inputIdentifier);
                 /*const updatedPersonalInfoForm = {
                         ...this.state.orderForm
