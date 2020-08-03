@@ -8,20 +8,15 @@ import Button from '../Button/Button';
 
 class PersonalInfo extends Component {
         state = {
-        orderForm: {
-                       firstName: {
-                                    elementConfig: {
-                                        type: 'text',
-                                        placeholder: 'Your FirstName'
-                                    },
-                                    value: '',
-                                    validation: {
-                                        required: true,
-                                    },
-                                    valid: false,
-                                    touched: false
-                                },
-
+                personalInfoForm: {
+                        firstName:{
+                            value:" ",
+                            validation:{
+                                  required: true,
+                             },
+                             valid: false,
+                             touched: false
+                        },
                 lastName : " ",
                 address : " ",
                 city : " ",
@@ -29,14 +24,10 @@ class PersonalInfo extends Component {
                 country :  " ",
                 email: " ",
                 phone: " ",
-                validation:{
-                            required: true,
-                            valid: false,
-                            touched: false,
-                            },
-                            loading: false,
-                            formIsValid: false
-                }
+                },
+                loading: false,
+                formIsValid: false,
+
         }
 
 
@@ -64,14 +55,41 @@ class PersonalInfo extends Component {
          }
 
 
-        handleChange = (event) =>{
-                const value = event.target.value;
-                              this.setState({
-                                ...this.state,
-                                [event.target.name]: value
-                              });
-        }
+        handleChange = (event, inputIdentifier) =>{
+                console.log(inputIdentifier);
+              const updatedForm = {
+                          ...this.state.personalInfoForm
+                      };
+                      const updatedFormElement= {
+                          ...updatedForm[inputIdentifier]
+                      };
+                      console.log(updatedFormElement);
+                      updatedFormElement.value = event.target.value;
+                      updatedFormElement.valid = this.checkValidity(updatedFormElement.value , updatedFormElement.validation )
+                      updatedFormElement.touched = true;
+                      //console.log(updatedFormElement);
+                      updatedForm[inputIdentifier] = updatedFormElement ;
 
+                      let formIsValid = true;
+                      for(let inputIdentifier in updatedForm){
+                          formIsValid = updatedForm[inputIdentifier].valid && formIsValid;
+                      }
+                      console.log(formIsValid);
+
+                      this.setState({personalInfoForm: updatedForm , formIsValid : formIsValid})
+           }
+
+
+        /*formSubmitHandler = (event) => {
+                event.preventDefault();
+                this.setState({loading : true})
+                console.log(this.state.loading);
+                *//*if(this.checkValidity()){
+                           alert("Form submitted");
+                        }else{
+                           alert("Form has errors.")
+                        }*//*
+        }*/
         //console.log(inputIdentifier);
                 /*const updatedPersonalInfoForm = {
                         ...this.state.orderForm
@@ -107,14 +125,14 @@ class PersonalInfo extends Component {
             return(
                 <Aux>
                 <span className ={styles.PersonalInfoLabel}> PERSONAL INFO </span>
-                <form className ={styles.PersonalInfo}>
+                <form className ={styles.PersonalInfo} onSubmit = {this.formSubmitHandler}>
                       <label className ={styles.Label}>
                         First name
                         <input
                           className ={styles.Input}
                           type="text"
                           name="firstName"
-                          value={this.state.orderForm.firstName.value}
+                          value={this.state.personalInfoForm.firstName.value}
                           onChange={this.handleChange}
                         />
                       </label>
