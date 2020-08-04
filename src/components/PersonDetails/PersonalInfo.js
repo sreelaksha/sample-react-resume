@@ -17,7 +17,14 @@ class PersonalInfo extends Component {
                              valid: false,
                              touched: false
                         },
-                lastName : " ",
+                lastName : {
+                               value:" ",
+                               validation:{
+                                     required: true,
+                                },
+                                valid: false,
+                                touched: false
+                           },
                 address : " ",
                 city : " ",
                 zipCode : " ",
