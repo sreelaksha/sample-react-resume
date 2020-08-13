@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './App.css';
+import FrontPage from './components/FrontPage/FrontPage'
 import PersonalInfo from './components/PersonDetails/PersonalInfo';
 import Experience from './components/Experience/Experience';
 import Education from './components/Education/Education';
@@ -11,7 +12,8 @@ class App extends Component {
         return (
                 <BrowserRouter>
                     <Switch>
-                           <Route path = "/" exact component = {PersonalInfo} />
+                            <Route path = "/" exact component = {FrontPage} />
+                           <Route path = "/personalInfo" exact component = {PersonalInfo} />
                            <Route path="/experience" component={Experience} />
                            <Route path="/education" component={Education} />
                     </Switch>
