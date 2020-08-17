@@ -3,10 +3,12 @@ import styles from './FrontPage.module.css';
 
 const frontPage = (props) => (
     <div className = {styles.FrontPage}>
-        <p>  Create your professional resume in just few minutes</p>
-        <button
-                    className = {styles.OrderButton}
-                    onClick = {props.ordered}> Build My Resume Now </button>
+    <nav>
+               <p>Create your professional resume in just few minutes
+                    <a href="/"> Build My Resume Now </a>
+                </p>
+            </nav>
+
     </div>
 );
 
