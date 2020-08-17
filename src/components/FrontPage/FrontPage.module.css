@@ -1,4 +1,7 @@
+
+
 .FrontPage {
+    background-color: #a593c2;
     display: flex;
     justify-content: space-between;
     align-items: center;
