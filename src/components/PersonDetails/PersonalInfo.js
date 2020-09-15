@@ -8,33 +8,32 @@ import Button from '../Button/Button';
 
 class PersonalInfo extends Component {
         state = {
-                personalInfoForm: {
-                        firstName:{
+                personalInfoForm: [
+                {firstName:{
                             value:" ",
                             validation:{
                                   required: true,
                              },
                              valid: false,
                              touched: false
-                        },
-                lastName : {
+                        }},
+                {lastName : {
                                value:" ",
                                validation:{
                                      required: true,
                                 },
                                 valid: false,
                                 touched: false
-                           },
+                           }},
                 address : " ",
                 city : " ",
                 zipCode : " ",
                 country :  " ",
                 email: " ",
                 phone: " ",
-                },
                 loading: false,
                 formIsValid: false,
-
+            ]
         }
 
 
@@ -139,7 +138,7 @@ class PersonalInfo extends Component {
                           className ={styles.Input}
                           type="text"
                           name="firstName"
-                          value={this.state.personalInfoForm.firstName.value}
+                          value={this.state.personalInfoForm[0].firstName.value}
                           onChange={this.handleChange}
                         />
                       </label>
