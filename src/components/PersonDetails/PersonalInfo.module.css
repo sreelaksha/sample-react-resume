@@ -15,6 +15,15 @@
         font-size: .8em;
         letter-spacing: .1em;
 }
+
+.red{
+    color: red;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 .Label{
     font-weight: bold;
     display: block;
