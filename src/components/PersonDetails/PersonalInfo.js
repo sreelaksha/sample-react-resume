@@ -9,32 +9,19 @@ import Button from '../Button/Button';
 class PersonalInfo extends Component {
         state = {
                 personalInfoForm: [
-                {firstName:{
-                            value:" ",
-                            validation:{
-                                  required: true,
-                             },
-                             valid: false,
-                             touched: false
-                        },
-                lastName : {
-                               value:" ",
-                               validation:{
-                                     required: true,
-                                },
-                                valid: false,
-                                touched: false
-                           },
-                address : " ",
-                city : " ",
-                zipCode : " ",
-                country :  " ",
-                email: " ",
-                phone: " ",
-                loading: false,
-                formIsValid: false,
-            }]
-        }
+                        firstName: " ",
+                         lastName : " ",
+                        address : " ",
+                        city : " ",
+                        zipCode : " ",
+                        country :  " ",
+                        email: " ",
+                        phone: " ",
+                        loading: false,
+                        formIsValid: false,
+            ]
+            }
+
 
 
         componentDidMount(){
@@ -128,6 +115,10 @@ class PersonalInfo extends Component {
                     }
 
         render(){
+
+            let classes = [];
+            if()
+
             return(
                 <Aux>
                 <span className ={styles.PersonalInfoLabel}> PERSONAL INFO </span>
@@ -219,6 +210,7 @@ class PersonalInfo extends Component {
                       <p> Your country is: {this.state.country}</p>
                       <p> Your email is: {this.state.email}</p>
                       <p> Your phone is: {this.state.phone}</p>
+                      <p> Some data missing </p>
                       <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
                  </Aux>
