@@ -16,15 +16,15 @@ class PersonalInfo extends Component {
                              },
                              valid: false,
                              touched: false
-                        }},
-                {lastName : {
+                        },
+                lastName : {
                                value:" ",
                                validation:{
                                      required: true,
                                 },
                                 valid: false,
                                 touched: false
-                           }},
+                           },
                 address : " ",
                 city : " ",
                 zipCode : " ",
@@ -33,7 +33,7 @@ class PersonalInfo extends Component {
                 phone: " ",
                 loading: false,
                 formIsValid: false,
-            ]
+            }]
         }
 
 
@@ -139,7 +139,7 @@ class PersonalInfo extends Component {
                           type="text"
                           name="firstName"
                           value={this.state.personalInfoForm[0].firstName.value}
-                          onChange={this.handleChange.bind(this,firstName)}
+                          onChange={this.handleChange.bind(this)}
                         />
                       </label>
                       <label className ={styles.Label}>
