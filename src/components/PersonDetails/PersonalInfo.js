@@ -139,7 +139,7 @@ class PersonalInfo extends Component {
                           type="text"
                           name="firstName"
                           value={this.state.personalInfoForm[0].firstName.value}
-                          onChange={this.handleChange.bind(this)}
+                          onChange={(event)=>this.handleChange()}
                         />
                       </label>
                       <label className ={styles.Label}>
