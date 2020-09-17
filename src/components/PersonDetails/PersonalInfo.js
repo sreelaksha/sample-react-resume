@@ -93,7 +93,10 @@ class PersonalInfo extends Component {
                     }
 
         render(){
-
+            const classes = [];
+            if(this.state.personalInfoForm.length < 8){
+                classes.push('red');
+            }
 
             return(
                 <Aux>
@@ -186,7 +189,7 @@ class PersonalInfo extends Component {
                       <p> Your country is: {this.state.country}</p>
                       <p> Your email is: {this.state.email}</p>
                       <p> Your phone is: {this.state.phone}</p>
-                      <p> Some data missing </p>
+                      <p className={classes.join(' ')}> Some data missing </p>
                       <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
                  </Aux>
