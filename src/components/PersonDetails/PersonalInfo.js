@@ -8,44 +8,22 @@ import Button from '../Button/Button';
 
 class PersonalInfo extends Component {
         state = {
-                personalInfoForm: [
-                        firstName: " ",
-                         lastName : " ",
-                        address : " ",
-                        city : " ",
-                        zipCode : " ",
-                        country :  " ",
-                        email: " ",
-                        phone: " ",
-                        loading: false,
-                        formIsValid: false,
-            ]
-            }
-
-
-
-        componentDidMount(){
-                        console.log(this.props);
-         }
-
-        checkValidity(value, rules){
-                let isValid = true;
-
-                if(!rules){
-                    return true;
+                    personalInfoForm: [
+                            {firstName: " ",
+                             lastName : " ",
+                            address : " ",
+                            city : " ",
+                            zipCode : " ",
+                            country :  " ",
+                            email: " ",
+                            phone: " ",
+                            }
+                    ]
                 }
 
-                if(rules.required){
-                    isValid = value.trim() !== '' && isValid;
-                }
-                /*if(rules.minLength){
-                            isValid = value.length >= rules.minLength && isValid;
-                }
-                if(rules.maxLength){
-                    isValid = value.length <= rules.maxLength && isValid;
-                }*/
-                return isValid;
-         }
+
+
+
 
 
         handleChange = (event, inputIdentifier) =>{
@@ -116,8 +94,6 @@ class PersonalInfo extends Component {
 
         render(){
 
-            let classes = [];
-            if()
 
             return(
                 <Aux>
