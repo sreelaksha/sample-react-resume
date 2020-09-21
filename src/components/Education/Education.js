@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 import Aux from '../../hoc/Aux';
 import styles from './Education.module.css';
@@ -31,7 +31,7 @@ class Experience extends Component {
 
   render(){
     return(
-         <Aux>
+         <Fragment>
               <span className ={styles.EducationLabel}> EDUCATION </span>
                  <form className ={styles.Education} >
                        <label className ={styles.Label}>
@@ -113,7 +113,7 @@ class Experience extends Component {
                      <p> Your attendHereCheckbox is: {this.state.attendHereCheckbox.toString()}</p>
                      <Button clicked = {this.handleButtonClick}> SAVE </Button>
                  </form>
-         </Aux>
+         </Fragment>
     );
   }
 
