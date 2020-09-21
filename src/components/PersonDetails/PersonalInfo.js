@@ -93,6 +93,7 @@ class PersonalInfo extends Component {
                     }
 
         render(){
+
             const classes = [];
             if(this.state.personalInfoForm.length < 8){
                 classes.push('red');

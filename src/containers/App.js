@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './App.css';
-import FrontPage from './components/FrontPage/FrontPage'
-import PersonalInfo from './components/PersonDetails/PersonalInfo';
-import Experience from './components/Experience/Experience';
-import Education from './components/Education/Education';
+import FrontPage from '../components/FrontPage/FrontPage'
+import PersonalInfo from '../components/PersonDetails/PersonalInfo';
+import Experience from '../components/Experience/Experience';
+import Education from '../components/Education/Education';
 
 class App extends Component {
     render(){
