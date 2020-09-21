@@ -2,10 +2,7 @@ import React from 'react';
 import styles from './Button.module.css';
 
     const button = (props) => (
-    useEffect(( =>{
-            console.log('Button - useEffect');
-    }))
-        <button
+        <button>
                 type="button"
                 className = {styles.Button}
                 onClick = {props.clicked} >
