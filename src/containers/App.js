@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import WithClass from '../hoc/WithClass.js';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import classes from './App.css';
 import FrontPage from '../components/FrontPage/FrontPage'
 import PersonalInfo from '../components/PersonDetails/PersonalInfo';
 import Experience from '../components/Experience/Experience';
@@ -10,6 +11,7 @@ import Education from '../components/Education/Education';
 class App extends Component {
     render(){
         return (
+            <WithClass classes = {classes.App}>
                 <BrowserRouter>
                     <Switch>
                             <Route path = "/" exact component = {FrontPage} />
@@ -18,6 +20,7 @@ class App extends Component {
                            <Route path="/education" component={Education} />
                     </Switch>
                 </BrowserRouter>
+            </WithClass>
          );
 
     }
