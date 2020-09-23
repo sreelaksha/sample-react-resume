@@ -8,17 +8,16 @@ import Button from '../Button/Button';
 
 class PersonalInfo extends Component {
         state = {
-                    personalInfoForm: [
-                            {firstName: " ",
-                             lastName : " ",
+                    personalInfoForm: {
+                            firstName: " ",
+                            lastName : " ",
                             address : " ",
                             city : " ",
                             zipCode : " ",
                             country :  " ",
                             email: " ",
                             phone: " ",
-                            }
-                    ]
+                     }
                 }
 
 
@@ -109,7 +108,7 @@ class PersonalInfo extends Component {
                           className ={styles.Input}
                           type="text"
                           name="firstName"
-                          value={this.state.personalInfoForm[0].firstName.value}
+                          value={this.state.personalInfoForm.firstName}
                           onChange={(event)=>this.handleChange}
                         />
                       </label>
@@ -119,7 +118,7 @@ class PersonalInfo extends Component {
                           className ={styles.Input}
                           type="text"
                           name="lastName"
-                          value={this.state.lastName}
+                          value={this.state.personalInfoForm.lastName}
                           onChange={this.handleChange}
                         />
                       </label>
