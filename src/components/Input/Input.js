@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Input.module.css';
+import PropTypes from 'prop-types';
 
 const input = (props) => {
     let inputElement = null;
@@ -45,5 +46,9 @@ const input = (props) => {
                  </div>
              );
          }
+
+   input.propTypes = {
+        elementType: propTypes.string.isRequired
+   };
 
 export default input;
