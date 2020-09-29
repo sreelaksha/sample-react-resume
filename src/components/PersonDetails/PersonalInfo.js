@@ -128,7 +128,7 @@ class PersonalInfo extends Component {
                              className ={styles.Input}
                             type="text"
                             name="address"
-                            value={this.state.address}
+                            value={this.state.personalInfoForm.address}
                             onChange={this.handleChange}
                           />
                         </label>
@@ -138,7 +138,7 @@ class PersonalInfo extends Component {
                                     className ={styles.Input}
                                     type="text"
                                     name="city"
-                                    value={this.state.city}
+                                    value={this.state.personalInfoForm.city}
                                     onChange={this.handleChange}
                                   />
                             </label>
@@ -148,7 +148,7 @@ class PersonalInfo extends Component {
                                   className ={styles.Input}
                                   type="number"
                                   name="zipCode"
-                                  value={this.state.zipCode}
+                                  value={this.state.personalInfoForm.zipCode}
                                   onChange={this.handleChange}
                                 />
                             </label>
@@ -167,7 +167,7 @@ class PersonalInfo extends Component {
                                   className ={styles.Input}
                                   type="email"
                                   name="email"
-                                  value={this.state.email}
+                                  value={this.state.personalInfoForm.email}
                                   onChange={this.handleChange}
                                 />
                             </label>
