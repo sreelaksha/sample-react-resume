@@ -1,0 +1,45 @@
+.PersonalInfo{
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    display:flex;
+    flex-flow: column;
+}
+
+.PersonalInfoLabel{
+        color: #283648;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: .8em;
+        letter-spacing: .1em;
+}
+
+.red{
+    color: red;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.Label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.Input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 600px){
+    .PersonalInfo{
+        width: 500px;
+    }
+}
