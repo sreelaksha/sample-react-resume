@@ -11,11 +11,10 @@ class PersonalInfo extends Component {
                     personalInfoForm: {
                             firstName: " ",
                             lastName : " ",
+                            email: " ",
                             address : " ",
                             city : " ",
-                            zipCode : " ",
                             country :  " ",
-                            email: " ",
                             phone: " ",
                      }
                 }
@@ -103,37 +102,51 @@ class PersonalInfo extends Component {
                 <span className ={styles.PersonalInfoLabel}> PERSONAL INFO </span>
                 <form className ={styles.PersonalInfo} onSubmit = {this.formSubmitHandler}>
                       <label className ={styles.Label}>
-                        First name
-                        <input
-                          className ={styles.Input}
-                          type="text"
-                          name="firstName"
-                          value={this.state.personalInfoForm.firstName}
-                          onChange={(event)=>this.handleChange}
-                        />
+                                First name
+                            <input
+                              className ={styles.Input}
+                              type="text"
+                              name="firstName"
+                              value={this.state.personalInfoForm.firstName}
+                              onChange={(event)=>this.handleChange}
+                            />
                       </label>
+
                       <label className ={styles.Label}>
-                        Last name
-                        <input
-                          className ={styles.Input}
-                          type="text"
-                          name="lastName"
-                          value={this.state.personalInfoForm.lastName}
-                          onChange={this.handleChange}
-                        />
+                                Last name
+                            <input
+                              className ={styles.Input}
+                              type="text"
+                              name="lastName"
+                              value={this.state.personalInfoForm.lastName}
+                              onChange={this.handleChange}
+                            />
                       </label>
+
                       <label className ={styles.Label}>
-                          Address
-                          <textarea
-                             className ={styles.Input}
-                            type="text"
-                            name="address"
-                            value={this.state.personalInfoForm.address}
-                            onChange={this.handleChange}
-                          />
+                                    Email
+                              <input
+                                className ={styles.Input}
+                                type="email"
+                                name="email"
+                                value={this.state.personalInfoForm.email}
+                                onChange={this.handleChange}
+                              />
+                      </label>
+
+                      <label className ={styles.Label}>
+                                    Address
+                              <textarea
+                                 className ={styles.Input}
+                                type="text"
+                                name="address"
+                                value={this.state.personalInfoForm.address}
+                                onChange={this.handleChange}
+                              />
                         </label>
+
                         <label className ={styles.Label}>
-                              City
+                                    City
                               <input
                                     className ={styles.Input}
                                     type="text"
@@ -142,45 +155,28 @@ class PersonalInfo extends Component {
                                     onChange={this.handleChange}
                                   />
                             </label>
+
                             <label className ={styles.Label}>
-                                ZIP Code
-                                <input
-                                  className ={styles.Input}
-                                  type="number"
-                                  name="zipCode"
-                                  value={this.state.personalInfoForm.zipCode}
-                                  onChange={this.handleChange}
-                                />
+                                        Country
+                                   <select className ={styles.Input} name="country" onChange={this.handleChange} value={this.state.country}>
+                                            <option value="Germany">Germany</option>
+                                            <option value="India">India</option>
+                                            <option value="USA">USA</option>
+                                            <option value="Russia">Russia</option>
+                                    </select>
                             </label>
+
                             <label className ={styles.Label}>
-                              Country
-                              <select className ={styles.Input} name="country" onChange={this.handleChange} value={this.state.country}>
-                                        <option value="Germany">Germany</option>
-                                        <option value="India">India</option>
-                                        <option value="USA">USA</option>
-                                        <option value="Russia">Russia</option>
-                             </select>
-                            </label>
-                            <label className ={styles.Label}>
-                                Email
-                                <input
-                                  className ={styles.Input}
-                                  type="email"
-                                  name="email"
-                                  value={this.state.personalInfoForm.email}
-                                  onChange={this.handleChange}
-                                />
-                            </label>
-                            <label className ={styles.Label}>
-                                Phone
-                                <input
-                                  className ={styles.Input}
-                                  type="number"
-                                  name="phone"
-                                  value={this.state.phone}
-                                  onChange={this.handleChange}
-                                />
-                            </label>
+                                        Phone
+                                    <input
+                                      className ={styles.Input}
+                                      type="number"
+                                      name="phone"
+                                      value={this.state.phone}
+                                      onChange={this.handleChange}
+                                    />
+                             </label>
+                             
                       <p> Your firstName is: {this.state.firstName}</p>
                       <p> Your lastName is: {this.state.lastName}</p>
                       <p> Your address is: {this.state.address}</p>
