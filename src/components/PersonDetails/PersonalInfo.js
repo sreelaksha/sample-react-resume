@@ -176,15 +176,15 @@ class PersonalInfo extends Component {
                                       onChange={this.handleChange}
                                     />
                              </label>
-                             
-                      <p> Your firstName is: {this.state.firstName}</p>
-                      <p> Your lastName is: {this.state.lastName}</p>
-                      <p> Your address is: {this.state.address}</p>
-                      <p> Your city is: {this.state.city}</p>
-                      <p> Your ZipCode is: {this.state.zipCode}</p>
-                      <p> Your country is: {this.state.country}</p>
-                      <p> Your email is: {this.state.email}</p>
-                      <p> Your phone is: {this.state.phone}</p>
+
+                      <p> Your First name is: {this.state.firstName}</p>
+                      <p> Your Last name is: {this.state.lastName}</p>
+                      <p> Your Email is: {this.state.email}</p>
+                      <p> Your Address is: {this.state.address}</p>
+                      <p> Your City is: {this.state.city}</p>
+                      <p> Your Country is: {this.state.country}</p>
+                      <p> Your Phone is: {this.state.phone}</p>
+
                       <p className={classes.join(' ')}> Some data missing </p>
                       <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
