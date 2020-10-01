@@ -19,5 +19,4 @@ const personalInfoSummary = (props) => {
 
     );
 }
-
 export default personalInfoSummary;

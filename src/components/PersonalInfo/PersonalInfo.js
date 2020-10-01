@@ -173,17 +173,18 @@ class PersonalInfo extends Component {
                                       onChange={this.handleChange}
                                     />
                              </label>
-                      <Modal>
-                      <PersonalInfoSummary personalInfoForm = {this.state.personalInfoForm}
-                                firstName ={this.state.personalInfoForm.firstName}
-                                lastName = {this.state.personalInfoForm.lastName}/>
-                       </Modal>
-                      /*
-
-                      <p className={classes.join(' ')}> Some data missing </p>
-                      */
                       <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
+                    <Modal>
+                          <PersonalInfoSummary personalInfoForm = {this.state.personalInfoForm}
+                                    firstName ={this.state.personalInfoForm.firstName}
+                                    lastName = {this.state.personalInfoForm.lastName}
+                                    email = {this.state.personalInfoForm.email}
+                                    address = {this.state.personalInfoForm.address}
+                                    city = {this.state.personalInfoForm.city}
+                                    country = {this.state.personalInfoForm.country}
+                                    phone = {this.state.personalInfoForm.phone}/>
+                     </Modal>
                  </Aux>
             );
         }
