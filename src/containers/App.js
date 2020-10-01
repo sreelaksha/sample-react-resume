@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import classes from './App.css';
 import FrontPage from '../components/FrontPage/FrontPage'
-import PersonalInfo from '../components/PersonDetails/PersonalInfo';
+import PersonalInfo from '../components/PersonalInfo/PersonalInfo';
 import Experience from '../components/Experience/Experience';
 import Education from '../components/Education/Education';
 
