@@ -6,6 +6,7 @@ import Aux from '../../hoc/Aux';
 import styles from './PersonalInfo.module.css';
 import Button from '../Button/Button';
 import PersonalInfoSummary from '../PersonalInfoSummary/PersonalInfoSummary';
+import Modal from '../Modal/Modal';
 
 class PersonalInfo extends Component {
         state = {
@@ -172,16 +173,15 @@ class PersonalInfo extends Component {
                                       onChange={this.handleChange}
                                     />
                              </label>
-                      <PersonalInfoSummary/>
-                      /*<p> Your First name is: {this.state.firstName}</p>
-                      <p> Your Last name is: {this.state.lastName}</p>
-                      <p> Your Email is: {this.state.email}</p>
-                      <p> Your Address is: {this.state.address}</p>
-                      <p> Your City is: {this.state.city}</p>
-                      <p> Your Country is: {this.state.country}</p>
-                      <p> Your Phone is: {this.state.phone}</p>
+                      <Modal>
+                      <PersonalInfoSummary personalInfoForm = {this.state.personalInfoForm}
+                                firstName ={this.state.personalInfoForm.firstName}
+                                lastName = {this.state.personalInfoForm.lastName}/>
+                       </Modal>
+                      /*
 
-                      <p className={classes.join(' ')}> Some data missing </p>*/
+                      <p className={classes.join(' ')}> Some data missing </p>
+                      */
                       <Button clicked = {this.handleButtonClick}> SAVE & NEXT </Button>
                     </form>
                  </Aux>
