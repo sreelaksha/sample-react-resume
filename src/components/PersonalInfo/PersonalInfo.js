@@ -21,28 +21,13 @@ class PersonalInfo extends Component {
                      }
                 }
 
-    handleChange = (event, inputIdentifier) =>{
-                console.log(inputIdentifier);
-              const updatedForm = {
+    handleChange = (event) =>{
+               const updatedForm = {
                           ...this.state.personalInfoForm
                       };
-                      const updatedFormElement= {
-                          ...updatedForm[inputIdentifier]
-                      };
-                      console.log(updatedFormElement);
-                      updatedFormElement.value = event.target.value;
-                      updatedFormElement.valid = this.checkValidity(updatedFormElement.value , updatedFormElement.validation )
-                      updatedFormElement.touched = true;
-                      //console.log(updatedFormElement);
-                      updatedForm[inputIdentifier] = updatedFormElement ;
 
-                      let formIsValid = true;
-                      for(let inputIdentifier in updatedForm){
-                          formIsValid = updatedForm[inputIdentifier].valid && formIsValid;
-                      }
-                      console.log(formIsValid);
-
-                      this.setState({personalInfoForm: updatedForm , formIsValid : formIsValid})
+                      updatedForm.value = event.target.value;
+                      this.setState({personalInfoForm: updatedForm })
            }
 
 
@@ -88,13 +73,7 @@ class PersonalInfo extends Component {
                     }
 
         render(){
-
-            const classes = [];
-            if(this.state.personalInfoForm.length < 8){
-                classes.push('red');
-            }
-
-            return(
+        return(
                 <Aux>
                 <span className ={styles.PersonalInfoLabel}> PERSONAL INFO </span>
                 <form className ={styles.PersonalInfo} onSubmit = {this.formSubmitHandler}>
@@ -104,7 +83,7 @@ class PersonalInfo extends Component {
                               className ={styles.Input}
                               type="text"
                               name="firstName"
-                              value={this.state.personalInfoForm.firstName}
+                              value={this.state.firstName}
                               onChange={(event)=>this.handleChange}
                             />
                       </label>
@@ -115,7 +94,7 @@ class PersonalInfo extends Component {
                               className ={styles.Input}
                               type="text"
                               name="lastName"
-                              value={this.state.personalInfoForm.lastName}
+                              value={this.state.lastName}
                               onChange={this.handleChange}
                             />
                       </label>
@@ -126,7 +105,7 @@ class PersonalInfo extends Component {
                                 className ={styles.Input}
                                 type="email"
                                 name="email"
-                                value={this.state.personalInfoForm.email}
+                                value={this.state.email}
                                 onChange={this.handleChange}
                               />
                       </label>
@@ -137,7 +116,7 @@ class PersonalInfo extends Component {
                                  className ={styles.Input}
                                 type="text"
                                 name="address"
-                                value={this.state.personalInfoForm.address}
+                                value={this.state.address}
                                 onChange={this.handleChange}
                               />
                         </label>
@@ -148,7 +127,7 @@ class PersonalInfo extends Component {
                                     className ={styles.Input}
                                     type="text"
                                     name="city"
-                                    value={this.state.personalInfoForm.city}
+                                    value={this.state.city}
                                     onChange={this.handleChange}
                                   />
                             </label>
