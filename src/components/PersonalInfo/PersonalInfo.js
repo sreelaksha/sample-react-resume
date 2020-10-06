@@ -156,13 +156,13 @@ class PersonalInfo extends Component {
                     </form>
                     <Modal>
                           <PersonalInfoSummary personalInfoForm = {this.state.personalInfoForm}
-                                    firstName ={this.state.personalInfoForm.firstName}
-                                    lastName = {this.state.personalInfoForm.lastName}
-                                    email = {this.state.personalInfoForm.email}
-                                    address = {this.state.personalInfoForm.address}
-                                    city = {this.state.personalInfoForm.city}
-                                    country = {this.state.personalInfoForm.country}
-                                    phone = {this.state.personalInfoForm.phone}/>
+                                    firstName ={this.state.firstName}
+                                    lastName = {this.state.lastName}
+                                    email = {this.state.email}
+                                    address = {this.state.address}
+                                    city = {this.state.city}
+                                    country = {this.state.country}
+                                    phone = {this.state.phone}/>
                      </Modal>
                  </Aux>
             );
