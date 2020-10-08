@@ -18,7 +18,8 @@ class PersonalInfo extends Component {
                             city : " ",
                             country :  " ",
                             phone: " ",
-                     }
+                     },
+                     personalInfoSubmitted: false,
                 }
 
     handleChange = (event) =>{
