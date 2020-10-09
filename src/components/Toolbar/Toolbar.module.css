@@ -20,6 +20,9 @@
 .Logo{
     height: 80%;
 }
+.SignIn_image{
+    height: 100%;
+}
 
 @media(max-width: 499px){
     .DesktopOnly{
