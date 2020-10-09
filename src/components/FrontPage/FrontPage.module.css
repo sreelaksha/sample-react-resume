@@ -1,7 +1,10 @@
 
 
 .FrontPage {
-    background-color: #a593c2;
+    background-color: black;
+    color: gray;
+    font-size: 2rem;
+    font-weight: 700;
     display: flex;
     justify-content: space-between;
     align-items: center;

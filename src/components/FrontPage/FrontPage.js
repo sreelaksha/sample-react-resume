@@ -5,9 +5,9 @@ import Toolbar from '../Toolbar/Toolbar';
 const frontPage = (props) => (
     <div className = {styles.FrontPage}>
     <Toolbar/><nav>
-               <p>Create your professional resume in just few minutes
+               <p>Create your professional resume in just few minutes</p>
                     <a href="/personalInfo">Build My Resume</a>
-                </p>
+
             </nav>
 
     </div>
