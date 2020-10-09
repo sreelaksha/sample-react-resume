@@ -6,9 +6,8 @@ import signInLogo from '../../assets/signin.png'
 const toolbar = (props) => (
         <header className = {styles.Toolbar}>
             <Logo/>
-            <div>MENU</div>
             <nav>
-                <img src = {signInLogo} alt = "Sign-In"/>
+                <img className = {styles.SignIn_image} src = {signInLogo} alt = "Sign-In"/>
             </nav>
         </header>
 );
