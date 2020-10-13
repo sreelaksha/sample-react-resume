@@ -2,16 +2,18 @@ import React from 'react';
 import styles from './FrontPage.module.css';
 import Toolbar from '../Toolbar/Toolbar';
 import Button from '../Button/Button';
+import Aux from '../../hoc/Aux';
 
 const frontPage = (props) => (
-    <div className = {styles.FrontPage}>
-    <Toolbar/><nav>
-               <p>Create your professional resume in just few minutes</p>
-                    <Button ><a className= {styles.button} href="/personalInfo">Build My Resume</a></Button>
+    <Aux>
+        <div className = {styles.FrontPage}>
+            <Toolbar/>
+                 <a>Create your professional resume in just few minutes</a>
+                  <Button ><a className= {styles.button} href="/personalInfo">Build My Resume</a></Button>
+        </div>
+     </Aux>
 
-            </nav>
 
-    </div>
 );
 
 export default frontPage;
