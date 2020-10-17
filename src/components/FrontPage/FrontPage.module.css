@@ -28,13 +28,6 @@
     outline: none;
 }
 
-.FrontPage button:disabled {
-    background-color: #AC9980;
-    border: 1px solid #7E7365;
-    color: #ccc;
-    cursor: default;
-}
-
 .FrontPage button:hover:disabled {
     background-color: light-green;
     color: #ccc;
