@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import WithClass from '../hoc/WithClass.js';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import classes from './App.css';
+import classes from './App.scss';
 import FrontPage from '../components/FrontPage/FrontPage'
 import PersonalInfo from '../components/PersonalInfo/PersonalInfo';
 import Experience from '../components/Experience/Experience';
