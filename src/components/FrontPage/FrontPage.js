@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FrontPage.module.css';
+import styles from './FrontPage.module.scss';
 import Navbar from '../Navbar/Navbar';
 import Button from '../Button/Button';
 import {FaEdit} from 'react-icons/fa';

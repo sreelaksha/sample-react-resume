@@ -1,0 +1,33 @@
+.FrontPage{
+    background-color: black;
+    color: gray;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 72px;
+
+     a{
+        text-decoration : none;
+      }
+
+
+    .button{
+        display: flex;
+        justify-content: center;
+        font: inherit;
+        padding: 3px;
+        margin : 0 5px;
+        width: 100px;
+        border: 0 solid #AA6817;
+        cursor: pointer;
+        outline: none;
+        }
+
+    .FrontPage button:hover:disabled {
+        background-color: light-green;
+        color: #ccc;
+        cursor: not-allowed;
+     }
+}
